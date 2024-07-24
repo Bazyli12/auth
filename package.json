@@ -1,0 +1,33 @@
+{
+    "name": "auth",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "turbo build",
+        "dev": "turbo dev",
+        "lint": "turbo lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
+        "husky": "^8.0.0",
+        "lint-staged": "^15.2.7",
+        "prettier": "^3.2.5",
+        "turbo": "^2.0.9",
+        "typescript": "^5.4.5"
+    },
+    "packageManager": "pnpm@8.15.6",
+    "engines": {
+        "node": ">=18"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "prettier --write"
+        ]
+    }
+}
